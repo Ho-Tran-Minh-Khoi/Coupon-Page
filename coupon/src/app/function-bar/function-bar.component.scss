@@ -1,0 +1,96 @@
+::ng-deep {
+	.k-appbar.function-bar {
+		height: 60px;
+		background-color: transparent;
+		box-shadow: 0 1px 0 #bdc2d2;
+		padding: 0;
+
+		.k-appbar-section:has(.k-breadcrumb) {
+			width: 36%;
+
+			.k-breadcrumb {
+				width: 100%;
+				background-color: transparent;
+
+				.k-breadcrumb-container {
+					.k-breadcrumb-item {
+
+						.k-breadcrumb-root-link,
+						.k-disabled,
+						.k-breadcrumb-link {
+							font-weight: 700;
+							font-size: 13px;
+							color: #959db3;
+							opacity: 1;
+						}
+					}
+
+					.k-breadcrumb-root-item {
+						.k-breadcrumb-root-link {
+							color: #008000;
+						}
+					}
+				}
+			}
+		}
+
+		.k-appbar-section:has(.k-button-group) {
+			height: 32px;
+
+			.k-button-group {
+				height: 100%;
+
+				.k-button {
+					font-weight: 700;
+					font-size: 11px;
+					margin: 0 5px;
+					border: none;
+					border-radius: 5px;
+					box-shadow: 2px 2px 4px 1px #0080005c;
+				}
+
+				.bg-white {
+					background-color: #FFFFFF;
+					color: #008000;
+				}
+
+				.bg-gray {
+					background-color: #BDC2D2;
+					color: #FFFFFF;
+				}
+
+				.bg-primary {
+					background-color: #008000;
+					color: #FFFFFF;
+				}
+
+				.px-1 {
+					padding: 0 10px;
+				}
+
+				.form-group-button {
+					padding: 0;
+					background-color: #FFFFFF;
+					border: none;
+
+					.k-button-text {
+						.k-button {
+							margin: 0;
+							background-color: transparent;
+							background-image: none;
+							box-shadow: none;
+						}
+
+						span.k-button {
+							width: 0px;
+							height: 20px;
+							padding: 0;
+							margin: 0 5px;
+							border: 1px solid #DBDEE7;
+						}
+					}
+				}
+			}
+		}
+	}
+}

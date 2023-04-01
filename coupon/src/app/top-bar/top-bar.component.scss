@@ -1,0 +1,79 @@
+::ng-deep {
+        .k-appbar.top-bar {
+                background-color: #FFFFFF;
+                width: 100%;
+                height: 50px;
+                border: none;
+                box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+                padding: 0;
+
+                .k-appbar-section {
+                        height: 100%;
+
+                        .form-item-top-bar {
+                                display: flex;
+                                align-items: center;
+                                position: relative;
+                                justify-content: space-around;
+                                height: 100%;
+
+                                a {
+                                        margin: 0 10px;
+                                        text-decoration: none;
+                                        font-weight: 700;
+                                        font-size: 13px;
+                                        color: #BBBBBB;
+                                }
+
+                                a.active {
+                                        color: #008000;
+                                }
+
+                                .k-appbar-separator {
+                                        height: 28px;
+                                        border: 1px solid #C4C4C4;
+                                        border-radius: 30px;
+                                }
+                        }
+
+                        .form-item-top-bar:has(.active)::after {
+                                content: "";
+                                height: 3px;
+                                width: 90%;
+                                background-color: #008000;
+                                border-radius: 30px;
+                                position: absolute;
+                                bottom: 0;
+                        }
+
+                        .k-badge-container {
+                                margin: 0 15px;
+
+                                .k-avatar {
+                                        background-color: transparent;
+                                }
+
+                                .k-icon {
+                                        color: #5A6276;
+                                        font-size: 22px;
+                                }
+
+                                .k-badge {
+                                        bottom: 5px;
+                                        right: 5px;
+                                        background-color: #05D103;
+                                        border: none;
+                                        font-weight: 400;
+                                        font-size: 12px;
+                                }
+
+                                .notification-bell {
+                                        width: 22px;
+                                        height: 22px;
+                                        background-color: #F1802E;
+                                        right: 2px;
+                                }
+                        }
+                }
+        }
+}

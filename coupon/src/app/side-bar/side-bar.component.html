@@ -1,0 +1,20 @@
+<kendo-drawer-container>
+	<kendo-drawer #drawer [items]="items" mode="push" [mini]="true" [expanded]="true" [autoCollapse]="false"
+		[isItemExpanded]="isItemExpanded" (select)="onSelect($event)">
+		<ng-template kendoDrawerHeaderTemplate>
+			<div class="form-button-img">
+				<div class="item-button">
+					<button kendoButton icon="menu" fillMode="flat" (click)="drawer.toggle()"
+						class="box-shadow-none"></button>
+				</div>
+				<div class="item-img">
+					<img src="../../assets/img/HachiLogo.png" alt="" height="45px">
+				</div>
+			</div>
+		</ng-template>
+	</kendo-drawer>
+	<kendo-drawer-content>
+		<app-top-bar></app-top-bar>
+		<app-function-bar></app-function-bar>
+	</kendo-drawer-content>
+</kendo-drawer-container>
