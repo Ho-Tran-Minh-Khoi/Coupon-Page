@@ -1,0 +1,208 @@
+::ng-deep {
+        .group-tittle {
+                display: flex;
+                justify-content: space-between;
+
+                .title {
+                        display: flex;
+                        align-items: end;
+
+                        h3 {
+                                font-size: 16px;
+                                font-weight: 700;
+                                color: #26282E;
+                        }
+
+                        h4 {
+                                font-size: 13px;
+                                font-weight: 700;
+                                color: #008000;
+                                margin-left: 30px;
+                        }
+
+                        h3,
+                        h4 {
+                                margin-top: 20px;
+                                margin-bottom: 15px;
+                        }
+                }
+
+                .k-button-group {
+                        margin-right: 20px;
+
+                        .k-button {
+                                margin: 30px 5px 5px 5px;
+                                padding: 0;
+                                background-color: transparent;
+                                border: none;
+                                background-image: none;
+
+                                .k-button-text {
+                                        font-weight: 400;
+                                        font-size: 13px;
+                                        color: #BBC0BB;
+
+                                        .k-appbar-separator {
+                                                margin-left: 10px;
+                                        }
+                                }
+                        }
+
+                        .k-button:focus {
+                                box-shadow: none;
+                        }
+
+                        .active {
+                                .k-button-text {
+                                        color: #626662;
+                                }
+                        }
+
+                        .k-appbar-separator {
+                                border-left: 1px solid #BBC0BB;
+                        }
+                }
+        }
+
+        .k-grid-layout {
+                background-color: #FFFFFF;
+                padding: 10px;
+
+                .box {
+                        .k-label {
+                                font-weight: 700;
+                                font-size: 13px;
+                                color: #959DB3;
+                        }
+
+                        .k-input {
+                                margin-top: 5px;
+                                border: none;
+                                outline: #DBDEE7 solid 2px;
+
+                                .k-input-inner {
+                                        font-weight: 400;
+                                        font-size: 13px;
+                                        color: #26282E;
+                                        height: 33px;
+                                }
+                        }
+
+                        .text-right {
+                                .k-input-inner {
+                                        text-align: right;
+                                }
+                        }
+
+                        .k-checkbox {
+                                border-color: #1A6634;
+                        }
+
+                        .k-checkbox:checked {
+                                background-color: #008000;
+                                border: #008000;
+                                box-shadow: none;
+                        }
+
+                        .k-checkbox:focus {
+                                box-shadow: none;
+                        }
+
+                        div {
+                                display: flex;
+                                align-items: center;
+
+                                .title-1 {
+                                        width: 180px;
+                                }
+
+                                input {
+                                        margin-top: 3px;
+                                }
+
+                                .title-2 {
+                                        margin-left: 5px;
+                                }
+                        }
+
+                        .k-textarea {
+                                height: calc(100% - 26px);
+
+                                textarea {
+                                        height: 100% !important;
+                                }
+                        }
+
+                        p {
+                                margin: 0;
+                                margin-top: 5;
+                                font-weight: 700;
+                                font-size: 13px;
+                                color: #1A6634;
+                        }
+
+                        .k-daterangepicker {
+                                height: 30px;
+                                margin-top: 5px;
+                                gap: 0;
+
+                                .k-appbar-separator {
+                                        width: 20px;
+                                }
+
+                                .k-datepicker {
+                                        height: 100%;
+                                        background-color: #F5F6F8;
+                                        outline: none;
+                                        display: flex;
+                                        flex-direction: row-reverse;
+
+                                        .k-input {
+                                                margin-top: 0;
+                                                height: 100%;
+                                        }
+
+                                        .k-input-button {
+                                                border: none;
+                                                background-image: none;
+
+                                                .k-button-icon {
+                                                        color: #959DB3;
+                                                }
+                                        }
+                                }
+
+                                .k-input-solid:focus,
+                                .k-input-solid.k-focus {
+                                        background-color: #008000;
+                                        box-shadow: none;
+
+                                        input {
+                                                color: #FFFFFF;
+                                        }
+
+                                        .k-input-button {
+                                                background-color: #008000;
+
+                                                .k-button-icon {
+                                                        color: #FFFFFF;
+                                                }
+                                        }
+                                }
+                        }
+                }
+
+                .box:first-child {
+                        display: flex;
+                        justify-content: space-between;
+                }
+
+                .cell-m {
+                        margin-left: 10px;
+                }
+        }
+
+        .bg-test {
+                background-color: aqua;
+        }
+}

@@ -23,6 +23,14 @@
 							color: #959db3;
 							opacity: 1;
 						}
+
+						.k-cursor-pointer:hover {
+							background-color: transparent;
+						}
+
+						.k-cursor-pointer:focus {
+							box-shadow: none;
+						}
 					}
 
 					.k-breadcrumb-root-item {

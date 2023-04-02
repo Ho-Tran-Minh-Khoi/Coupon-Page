@@ -1,0 +1,80 @@
+<div class="group-tittle">
+        <div class="title">
+                <h3>THÔNG TIN COUPON</h3>
+                <h4>Coupon giảm giá đơn hàng</h4>
+        </div>
+        <kendo-buttongroup>
+                <button kendoButton *ngFor="let item of language" [ngClass]="btnActive == item ? 'active' : ''">
+                        {{item}}
+                        <span class="k-appbar-separator" *ngIf="item != 'English'"></span>
+                </button>
+        </kendo-buttongroup>
+</div>
+<kendo-gridlayout [cols]="[265, 'auto']" [gap]="10">
+        <!-- Cell 1 -->
+        <kendo-gridlayout-item class="box">
+                <kendo-label text="Mã bắt đầu coupon" [style.width.px]="165">
+                        <kendo-textbox value="KMGBL22"></kendo-textbox>
+                </kendo-label>
+                <kendo-label text="SL phát hành" [style.width.px]="85">
+                        <kendo-numerictextbox [value]="10" [format]="{style: 'decimal'}" [spinners]="false" class="text-right"></kendo-numerictextbox>
+                </kendo-label>
+        </kendo-gridlayout-item>
+
+        <!-- Cell 2-->
+        <kendo-gridlayout-item [col]="2" class="box cell-m">
+                <kendo-label text="Tên coupon">
+                        <kendo-textbox value="Giảm 100K "></kendo-textbox>
+                </kendo-label>
+        </kendo-gridlayout-item>
+
+        <!-- Cell 3-->
+        <kendo-gridlayout-item [row]="2" class="box">
+                <kendo-label>
+                        <input type="checkbox" size="small" #codeRandom kendoCheckBox />
+                        <kendo-label [for]="codeRandom" text="Mã coupon ngẫu nhiên gấp (x) lần"></kendo-label>
+                </kendo-label>
+                <kendo-numerictextbox [value]="1" [format]="{style: 'decimal'}" [spinners]="false" class="text-right"></kendo-numerictextbox>
+        </kendo-gridlayout-item>
+
+        <!-- Cell 4-->
+        <kendo-gridlayout-item [col]="2" class="box cell-m">
+                <kendo-label text="Mô tả điều kiện áp dụng">
+                        <kendo-textbox value="Áp dụng cho đơn hàng có giá trị trên 600.00 đ "></kendo-textbox>
+                </kendo-label>
+        </kendo-gridlayout-item>
+
+        <!-- Cell 5-->
+        <kendo-gridlayout-item [row]="3" class="box">
+                <div>
+                        <kendo-label text="Giá trị coupon" class="title-1"></kendo-label>
+                        <input type="checkbox" size="small" #percen kendoCheckBox />
+                        <kendo-label [for]="percen" text="Tỷ lệ %" class="title-2"></kendo-label>
+                </div>
+                <kendo-numerictextbox [value]="100000" [format]="{style: 'decimal'}" [spinners]="false" class="text-right"></kendo-numerictextbox>
+        </kendo-gridlayout-item>
+
+        <!-- Cell 6-->
+        <kendo-gridlayout-item [rowSpan]="3" class="box cell-m">
+                <kendo-label text="Diễn giải ">
+                        <kendo-textarea [value]="'KMGBL22-Voucher lịch 100k HĐ 600k-NGÀY KÍNH LÃO-HSD 30/9/22'" resizable="none"></kendo-textarea>
+                </kendo-label>
+        </kendo-gridlayout-item>
+
+        <!-- Cell 7-->
+        <kendo-gridlayout-item class="box">
+                <kendo-label text="Thời gian hiệu lực">
+                        <kendo-daterange>
+                                <kendo-datepicker calendarType="classic" [value]="value" format="dd/MM/yyyy"></kendo-datepicker>
+                                <span class="k-appbar-separator"></span>
+                                <kendo-datepicker calendarType="classic" [value]="value" format="dd/MM/yyyy"></kendo-datepicker>
+                        </kendo-daterange>
+                </kendo-label>
+        </kendo-gridlayout-item>
+
+        <!-- Cell 8-->
+        <kendo-gridlayout-item class="box">
+                <kendo-label text="Tình trạng"></kendo-label>
+                <p>Đã phê duyệt áp dụng</p>
+        </kendo-gridlayout-item>
+</kendo-gridlayout>

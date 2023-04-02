@@ -1,0 +1,15 @@
+.main-views {
+        height: calc(99% - 50px - 60px);
+        overflow: auto;
+        margin-bottom: 5px;
+}
+
+.main-views::-webkit-scrollbar {
+        width: 4px;
+        background-color: transparent;
+}
+
+.main-views::-webkit-scrollbar-thumb {
+        background-color: #008000;
+        border-radius: 30px;
+}

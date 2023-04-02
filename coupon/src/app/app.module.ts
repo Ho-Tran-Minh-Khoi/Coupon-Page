@@ -12,6 +12,14 @@ import { ButtonsModule } from '@progress/kendo-angular-buttons';
 import { IconsModule } from '@progress/kendo-angular-icons';
 import { LayoutModule } from '@progress/kendo-angular-layout';
 import { IndicatorsModule } from '@progress/kendo-angular-indicators';
+import { MainViewsComponent } from './main-views/main-views.component';
+import { ConditionsApplyComponent } from './conditions-apply/conditions-apply.component';
+import { LabelModule } from '@progress/kendo-angular-label';
+import { InputsModule } from '@progress/kendo-angular-inputs';
+import { DateInputsModule } from '@progress/kendo-angular-dateinputs';
+
+
+
 
 
 
@@ -24,7 +32,9 @@ import { IndicatorsModule } from '@progress/kendo-angular-indicators';
     AppComponent,
     TopBarComponent,
     SideBarComponent,
-    FunctionBarComponent
+    FunctionBarComponent,
+    MainViewsComponent,
+    ConditionsApplyComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +44,10 @@ import { IndicatorsModule } from '@progress/kendo-angular-indicators';
     ButtonsModule,
     IconsModule,
     LayoutModule,
-    IndicatorsModule
+    IndicatorsModule,
+    LabelModule,
+    InputsModule,
+    DateInputsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
