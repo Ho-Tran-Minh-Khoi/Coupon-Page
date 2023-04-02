@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -17,14 +17,7 @@ import { ConditionsApplyComponent } from './conditions-apply/conditions-apply.co
 import { LabelModule } from '@progress/kendo-angular-label';
 import { InputsModule } from '@progress/kendo-angular-inputs';
 import { DateInputsModule } from '@progress/kendo-angular-dateinputs';
-
-
-
-
-
-
-
-
+import "@progress/kendo-angular-intl/locales/vi/all";
 
 
 @NgModule({
@@ -49,7 +42,7 @@ import { DateInputsModule } from '@progress/kendo-angular-dateinputs';
     InputsModule,
     DateInputsModule
   ],
-  providers: [],
+  providers: [{ provide: LOCALE_ID, useValue: "vi-VI" }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

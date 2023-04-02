@@ -202,7 +202,138 @@
                 }
         }
 
-        .bg-test {
-                background-color: aqua;
+        .k-animation-container {
+                height: auto;
+                width: 287px;
+
+                // .meeting {
+                //         position: relative;
+                //         color: #00a1e8;
+                // }
+                // .meeting:after {
+                //         position: absolute;
+                //         bottom: -2px;
+                //         left: 50%;
+                //         width: 3px;
+                //         height: 3px;
+                //         margin-left: -1.5px;
+                //         content: '';
+                //         border-radius: 50%;
+                //         background-color: #00a1e8;
+                // }
+                .k-calendar-container {
+                        height: 100%;
+                        border: none;
+
+                        .k-calendar {
+                                width: 100%;
+
+                                .k-calendar-header {
+                                        padding-bottom: 0;
+
+                                        .k-calendar-nav {
+                                                .k-calendar-nav-today {
+                                                        display: none;
+                                                }
+
+                                                .k-button-flat:hover {
+                                                        background-color: #F5F6F8;
+                                                        border-radius: 30px;
+                                                }
+
+                                                .k-button-flat {
+                                                        margin-left: 10px;
+                                                }
+                                        }
+
+                                        .k-calendar-title {
+                                                font-weight: 700;
+                                                font-size: 13px;
+                                                color: #5A6276;
+                                                text-transform: capitalize;
+                                        }
+                                }
+
+                                .k-calendar-view {
+                                        margin: 0;
+                                        padding: 0;
+                                        height: 100%;
+                                        min-height: 205px;
+
+                                        .k-calendar-table {
+                                                width: 100%;
+                                                min-width: 293px;
+                                                min-height: 205px;
+                                                max-height: 246px;
+
+                                                .k-calendar-thead {
+                                                        display: none;
+                                                }
+
+                                                .k-calendar-tbody {
+                                                        border-spacing: 0;
+
+                                                        .k-calendar-tr {
+                                                                .k-calendar-td {
+                                                                        height: 35px;
+                                                                        background-color: transparent !important;
+                                                                        padding: 3px;
+                                                                        font-size: 13px;
+                                                                        font-weight: 400;
+
+                                                                        .k-link {
+                                                                                border-radius: 30px;
+                                                                        }
+                                                                }
+
+                                                                .k-calendar-td:has(.d-none) {
+                                                                        display: none;
+                                                                }
+
+                                                                .k-selected,
+                                                                .k-today.k-selected {
+                                                                        .k-link {
+                                                                                outline: none;
+                                                                                box-shadow: none;
+                                                                                color: #FFFFFF;
+                                                                                background-color: #008000;
+                                                                        }
+                                                                }
+
+                                                                .k-today {
+                                                                        .k-link {
+                                                                                outline: none;
+                                                                                box-shadow: none;
+                                                                                background-color: #F5F6F8;
+                                                                                color: #26282E;
+                                                                        }
+                                                                }
+
+                                                                .k-calendar-td:hover,
+                                                                .k-today:hover,
+                                                                .k-selected:hover {
+                                                                        .k-link {
+                                                                                outline: #008000 solid 1px;
+                                                                                color: #26282E;
+                                                                                background-color: transparent;
+                                                                        }
+                                                                }
+
+                                                                .k-disabled {
+                                                                        .k-link {
+                                                                                color: #26282E;
+                                                                                opacity: 0.2;
+                                                                        }
+                                                                }
+
+                                                                .k-other-month {
+                                                                        visibility: hidden;
+                                                                }
+                                                        }
+                                                }
+                                        }
+                                }
+                        }
+                }
         }
 }

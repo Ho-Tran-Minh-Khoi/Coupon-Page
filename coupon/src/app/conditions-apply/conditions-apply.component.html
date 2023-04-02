@@ -65,9 +65,22 @@
         <kendo-gridlayout-item class="box">
                 <kendo-label text="Thời gian hiệu lực">
                         <kendo-daterange>
-                                <kendo-datepicker calendarType="classic" [value]="value" format="dd/MM/yyyy"></kendo-datepicker>
+                                <kendo-datepicker calendarType="classic" [value]="value" format="dd/MM/yyyy" [disabledDates]="disabledDates">
+                                        <!-- <ng-template kendoCalendarMonthCellTemplate let-date>
+                                                <ng-template kendoCalendarHeaderTitleTemplate let-title>
+                                                        <span [ngClass]="isNone(date, title)">{{ date.getDate() }}</span>
+                                                </ng-template>
+                                        </ng-template> -->
+                                </kendo-datepicker>
                                 <span class="k-appbar-separator"></span>
-                                <kendo-datepicker calendarType="classic" [value]="value" format="dd/MM/yyyy"></kendo-datepicker>
+                                <kendo-datepicker calendarType="classic" [value]="value" format="dd/MM/yyyy" [disabledDates]="disabledDates">
+                                        <ng-template kendoCalendarHeaderTitleTemplate let-title>
+                                                {{title.replace(' 20', ', 20')}}
+                                                <ng-template kendoCalendarMonthCellTemplate let-date>
+                                                        <span [ngClass]="isNone(date, title)">{{ date.getDate() }}</span>
+                                                </ng-template>
+                                        </ng-template>
+                                </kendo-datepicker>
                         </kendo-daterange>
                 </kendo-label>
         </kendo-gridlayout-item>
