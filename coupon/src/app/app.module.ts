@@ -13,11 +13,16 @@ import { IconsModule } from '@progress/kendo-angular-icons';
 import { LayoutModule } from '@progress/kendo-angular-layout';
 import { IndicatorsModule } from '@progress/kendo-angular-indicators';
 import { MainViewsComponent } from './main-views/main-views.component';
-import { ConditionsApplyComponent } from './conditions-apply/conditions-apply.component';
+import { CouponInfoComponent } from './coupon-info/coupon-info.component';
 import { LabelModule } from '@progress/kendo-angular-label';
 import { InputsModule } from '@progress/kendo-angular-inputs';
 import { DateInputsModule } from '@progress/kendo-angular-dateinputs';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 import "@progress/kendo-angular-intl/locales/vi/all";
+import { ConditonsApplyComponent } from './conditions-apply/conditons-apply.component';
+import { TreeViewModule } from '@progress/kendo-angular-treeview';
+
 
 
 @NgModule({
@@ -27,7 +32,8 @@ import "@progress/kendo-angular-intl/locales/vi/all";
     SideBarComponent,
     FunctionBarComponent,
     MainViewsComponent,
-    ConditionsApplyComponent
+    CouponInfoComponent,
+    ConditonsApplyComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +46,10 @@ import "@progress/kendo-angular-intl/locales/vi/all";
     IndicatorsModule,
     LabelModule,
     InputsModule,
-    DateInputsModule
+    DateInputsModule,
+    FormsModule,
+    ReactiveFormsModule,
+    TreeViewModule
   ],
   providers: [{ provide: LOCALE_ID, useValue: "vi-VI" }],
   bootstrap: [AppComponent]

@@ -4,7 +4,7 @@
                 <h4>Coupon giảm giá đơn hàng</h4>
         </div>
         <kendo-buttongroup>
-                <button kendoButton *ngFor="let item of language" [ngClass]="btnActive == item ? 'active' : ''">
+                <button kendoButton *ngFor="let item of language" [ngClass]="language[btnActive] == item ? 'active' : ''" (click)="change_language(language.indexOf(item))">
                         {{item}}
                         <span class="k-appbar-separator" *ngIf="item != 'English'"></span>
                 </button>
@@ -23,8 +23,8 @@
 
         <!-- Cell 2-->
         <kendo-gridlayout-item [col]="2" class="box cell-m">
-                <kendo-label text="Tên coupon">
-                        <kendo-textbox value="Giảm 100K "></kendo-textbox>
+                <kendo-label text="{{arrLanguage[btnActive][0]}}">
+                        <kendo-textbox [(ngModel)]="couponName"></kendo-textbox>
                 </kendo-label>
         </kendo-gridlayout-item>
 
@@ -39,8 +39,8 @@
 
         <!-- Cell 4-->
         <kendo-gridlayout-item [col]="2" class="box cell-m">
-                <kendo-label text="Mô tả điều kiện áp dụng">
-                        <kendo-textbox value="Áp dụng cho đơn hàng có giá trị trên 600.00 đ "></kendo-textbox>
+                <kendo-label text="{{arrLanguage[btnActive][1]}}">
+                        <kendo-textbox [(ngModel)]="description"></kendo-textbox>
                 </kendo-label>
         </kendo-gridlayout-item>
 
@@ -56,8 +56,8 @@
 
         <!-- Cell 6-->
         <kendo-gridlayout-item [rowSpan]="3" class="box cell-m">
-                <kendo-label text="Diễn giải ">
-                        <kendo-textarea [value]="'KMGBL22-Voucher lịch 100k HĐ 600k-NGÀY KÍNH LÃO-HSD 30/9/22'" resizable="none"></kendo-textarea>
+                <kendo-label text="{{arrLanguage[btnActive][2]}}">
+                        <kendo-textarea [(ngModel)]="explain" resizable="none"></kendo-textarea>
                 </kendo-label>
         </kendo-gridlayout-item>
 
@@ -66,11 +66,12 @@
                 <kendo-label text="Thời gian hiệu lực">
                         <kendo-daterange>
                                 <kendo-datepicker calendarType="classic" [value]="value" format="dd/MM/yyyy" [disabledDates]="disabledDates">
-                                        <!-- <ng-template kendoCalendarMonthCellTemplate let-date>
-                                                <ng-template kendoCalendarHeaderTitleTemplate let-title>
+                                        <ng-template kendoCalendarHeaderTitleTemplate let-title>
+                                                {{title.replace(' 20', ', 20')}}
+                                                <ng-template kendoCalendarMonthCellTemplate let-date>
                                                         <span [ngClass]="isNone(date, title)">{{ date.getDate() }}</span>
                                                 </ng-template>
-                                        </ng-template> -->
+                                        </ng-template>
                                 </kendo-datepicker>
                                 <span class="k-appbar-separator"></span>
                                 <kendo-datepicker calendarType="classic" [value]="value" format="dd/MM/yyyy" [disabledDates]="disabledDates">
