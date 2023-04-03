@@ -1,31 +1,23 @@
 import { Component } from '@angular/core';
-import { CheckableSettings } from "@progress/kendo-angular-treeview";
-import { of, Observable } from "rxjs";
+import { FormControl, FormGroup } from '@angular/forms';
+import { CheckableSettings } from '@progress/kendo-angular-treeview';
+import { Observable, of } from 'rxjs';
 
 @Component({
 	selector: 'app-conditions-apply',
-	templateUrl: './conditons-apply.component.html',
-	styleUrls: ['./conditons-apply.component.scss']
+	templateUrl: './conditions-apply.component.html',
+	styleUrls: ['./conditions-apply.component.scss']
 })
-export class ConditonsApplyComponent {
-	public checkedKeys: any[] = ["2"];
-
-	public enableCheck = true;
+export class ConditionsApplyComponent {
 	public checkChildren = true;
 	public checkDisabledChildren = false;
 	public checkParents = true;
-	public checkOnClick = false;
-	public checkMode: any = "multiple";
-	public selectionMode: any = "single";
 
 	public get checkableSettings(): CheckableSettings {
 		return {
 			checkChildren: this.checkChildren,
 			checkDisabledChildren: this.checkDisabledChildren,
 			checkParents: this.checkParents,
-			enabled: this.enableCheck,
-			mode: this.checkMode,
-			checkOnClick: this.checkOnClick,
 		};
 	}
 
@@ -47,4 +39,10 @@ export class ConditonsApplyComponent {
 
 	public children = (dataItem: any): Observable<any[]> => of(dataItem.items);
 	public hasChildren = (dataItem: any): boolean => !!dataItem.items;
+
+	public checkType = true
+
+	public typeCoupon = (typeB: boolean): void => {
+		this.checkType = typeB
+	};
 }

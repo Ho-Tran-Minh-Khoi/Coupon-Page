@@ -1,0 +1,56 @@
+<div class="group-tittle">
+        <h3>ĐIỀU KIỆN ÁP DỤNG</h3>
+</div>
+<kendo-gridlayout [cols]="[220, 265, 'auto']" [gap]="100">
+        <!-- Cell 1 -->
+        <kendo-gridlayout-item class="box">
+                <kendo-label text="Đơn vị áp dụng">
+                        <kendo-treeview [nodes]="data" [children]="children" [hasChildren]="hasChildren" textField="text" [kendoTreeViewCheckable]="{checkChildren: true, checkOnClick: true}"></kendo-treeview>
+                </kendo-label>
+        </kendo-gridlayout-item>
+
+        <!-- Cell 2-->
+        <kendo-gridlayout-item class="box cell-2">
+                <kendo-label text="Hạn mức sử dụng">
+                        <kendo-label text="Số lượt sử dùng của coupon" class="text-dark mt-1">
+                                <kendo-numerictextbox [value]="5000" [format]="{style: 'decimal'}" [spinners]="false" class="text-right" [style.width.px]="67" [style.height.px]="24"></kendo-numerictextbox>
+                        </kendo-label>
+                        <kendo-label text="Số lượt dùng tồi đa/1 giao dịch" class="text-dark mt-1">
+                                <kendo-numerictextbox [value]="1" [format]="{style: 'decimal'}" [spinners]="false" class="text-right" [style.width.px]="67" [style.height.px]="24"></kendo-numerictextbox>
+                        </kendo-label>
+                </kendo-label>
+                <kendo-label text="Giá trị đơn hàng được áp dụng coupon" class="mt-5">
+                        <kendo-label text="Giá trị đơn hàng tối thiểu" class="text-dark mt-1">
+                                <kendo-numerictextbox [value]="0" [format]="{style: 'decimal'}" [spinners]="false" class="text-right" [style.width.px]="67" [style.height.px]="24"></kendo-numerictextbox>
+                        </kendo-label>
+                </kendo-label>
+                <kendo-label text="Giá trị chiết khấu tối đa của coupon" class="mt-5">
+                        <kendo-label text="Giá trị chiết khấu tối đa" class="text-dark mt-1">
+                                <kendo-numerictextbox [value]="100000" [format]="{style: 'decimal'}" [spinners]="false" class="text-right" [style.width.px]="67" [style.height.px]="24"></kendo-numerictextbox>
+                        </kendo-label>
+                </kendo-label>
+        </kendo-gridlayout-item>
+
+        <!-- Cell 3-->
+        <kendo-gridlayout-item class="box cell-3">
+                <kendo-label text="Phân loại coupon">
+                        <kendo-label text="Công khai" class="text-dark mt-2" [for]="congkhai">
+                                <input type="radio" name="ckcn" class="mr-2" size="small" kendoRadioButton (click)="typeCoupon(true)" #congkhai checked />
+                        </kendo-label>
+                        <kendo-label text="Cá nhân" class="text-dark mt-2" [for]="canhan">
+                                <input type="radio" name="ckcn" class="mr-2" size="small" kendoRadioButton (click)="typeCoupon(false)" #canhan />
+                        </kendo-label>
+                        <kendo-label text="Đích danh" class="text-dark mt-2 ml-6" [for]="dichdanh">
+                                <input type="checkbox" size="small" [disabled]="checkType" [checked]="!checkType" #dichdanh kendoCheckBox class="mr-2" />
+                        </kendo-label>
+                </kendo-label>
+                <kendo-label text="SL phát hành áp dụng" class="mt-5">
+                        <kendo-label text="Số coupon cho từng cá nhân" class="text-dark mt-2" [for]="terms">
+                                <input type="radio" size="small" #terms kendoRadioButton name="terms" class="mr-2" checked />
+                        </kendo-label>
+                        <kendo-label text="Coupon dùng chung cho tất cả" class="text-dark mt-2" [for]="terms1">
+                                <input type="radio" size="small" #terms1 kendoRadioButton name="terms" class="mr-2" />
+                        </kendo-label>
+                </kendo-label>
+        </kendo-gridlayout-item>
+</kendo-gridlayout>

@@ -20,8 +20,8 @@ import { DateInputsModule } from '@progress/kendo-angular-dateinputs';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import "@progress/kendo-angular-intl/locales/vi/all";
-import { ConditonsApplyComponent } from './conditions-apply/conditons-apply.component';
 import { TreeViewModule } from '@progress/kendo-angular-treeview';
+import { ConditionsApplyComponent } from './conditions-apply/conditions-apply.component';
 
 
 
@@ -33,7 +33,7 @@ import { TreeViewModule } from '@progress/kendo-angular-treeview';
     FunctionBarComponent,
     MainViewsComponent,
     CouponInfoComponent,
-    ConditonsApplyComponent
+    ConditionsApplyComponent
   ],
   imports: [
     BrowserModule,
