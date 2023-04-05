@@ -24,27 +24,27 @@
         </kendo-label>
 
         <kendo-label class="row row-3" text="Thời điểm gởi thông báo trên App mobile">
-                <!-- <kendo-datetimepicker [(value)]="value" [disabledDates]="disabledDates" calendarType="classic">
+                <kendo-datetimepicker [(value)]="value" [disabledDates]="disabledDates" calendarType="classic" format="dd/MM/yyyy HH:mm a">
                         <ng-template kendoCalendarHeaderTitleTemplate let-title>
                                 {{title.replace(' 20', ', 20')}}
                                 <ng-template kendoCalendarMonthCellTemplate let-date>
                                         <span [ngClass]="isNone(date, title)">{{ date.getDate() }}</span>
                                 </ng-template>
                         </ng-template>
-                </kendo-datetimepicker> -->
-                <kendo-datetimepicker calendarType="classic"></kendo-datetimepicker>
-
+                </kendo-datetimepicker>
         </kendo-label>
 
         <kendo-label class="row row-4" text="Đối tượng gởi thông báo trên App mobile">
-                <kendo-label class="k-checkbox-label" [for]="cb1" text="Tất cả đối tượng nhận coupon tải app">
-                        <input type="checkbox" #cb1 kendoCheckBox />
-                </kendo-label>
-                <kendo-label class="k-checkbox-label" [for]="cb2" text="Tất cả KHTT tải app">
-                        <input type="checkbox" #cb2 kendoCheckBox />
-                </kendo-label>
-                <kendo-label class="k-checkbox-label" [for]="cb3" text="TTất cả khách hàng tải app">
-                        <input type="checkbox" #cb3 kendoCheckBox />
-                </kendo-label>
+                <div>
+                        <kendo-label class="k-checkbox-label" [for]="cb1" text="Tất cả đối tượng nhận coupon tải app">
+                                <input type="radio" name="sentTo" #cb1 kendoRadioButton />
+                        </kendo-label>
+                        <kendo-label class="k-checkbox-label" [for]="cb2" text="Tất cả KHTT tải app">
+                                <input type="radio" name="sentTo" #cb2 kendoRadioButton checked />
+                        </kendo-label>
+                        <kendo-label class="k-checkbox-label" [for]="cb3" text="Tất cả khách hàng tải app">
+                                <input type="radio" name="sentTo" #cb3 kendoRadioButton />
+                        </kendo-label>
+                </div>
         </kendo-label>
 </div>

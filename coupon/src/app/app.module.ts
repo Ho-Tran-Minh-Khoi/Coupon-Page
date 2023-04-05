@@ -23,6 +23,7 @@ import "@progress/kendo-angular-intl/locales/vi/all";
 import { TreeViewModule } from '@progress/kendo-angular-treeview';
 import { ConditionsApplyComponent } from './conditions-apply/conditions-apply.component';
 import { NotiConfigComponent } from './noti-config/noti-config.component';
+import { DetailProgramComponent } from './detail-program/detail-program.component';
 
 
 
@@ -35,7 +36,8 @@ import { NotiConfigComponent } from './noti-config/noti-config.component';
     MainViewsComponent,
     CouponInfoComponent,
     ConditionsApplyComponent,
-    NotiConfigComponent
+    NotiConfigComponent,
+    DetailProgramComponent
   ],
   imports: [
     BrowserModule,
