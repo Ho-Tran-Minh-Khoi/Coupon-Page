@@ -36,7 +36,44 @@
                 box-shadow: none;
         }
 
+        .cell-1 {
+                kendo-label {
+                        .k-treeview {
+                                .k-treeview-group {
+                                        .k-treeview-item {
+                                                padding-left: 0;
+
+                                                .k-treeview-group {
+                                                        padding-left: 16px;
+
+                                                        .k-treeview-item {
+                                                                div {
+                                                                        .k-checkbox-wrapper {
+                                                                                input {
+                                                                                        width: 12px;
+                                                                                        height: 12px;
+                                                                                }
+                                                                        }
+
+                                                                        .k-treeview-leaf.k-focus {
+                                                                                box-shadow: none;
+                                                                        }
+                                                                }
+                                                        }
+                                                }
+                                        }
+                                }
+                        }
+                }
+        }
+
         .cell-2 {
+                .bg-g {
+                        input {
+                                background-color: #c4c4c457;
+                        }
+                }
+
                 kendo-label {
                         display: flex;
                         flex-direction: column;

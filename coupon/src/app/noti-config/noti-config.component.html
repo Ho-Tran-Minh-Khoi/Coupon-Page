@@ -1,0 +1,50 @@
+<div class="group-tittle">
+        <div class="title">
+                <h3>CẤU HÌNH GỞI THÔNG BÁO</h3>
+        </div>
+        <kendo-buttongroup>
+                <button kendoButton *ngFor="let item of config" [ngClass]="config[btnActive] == item ? 'active' : ''">
+                        {{item}}
+                        <span class="k-appbar-separator" *ngIf="item != 'Giỏ hàng'"></span>
+                </button>
+        </kendo-buttongroup>
+</div>
+<div class="container">
+        <div class="row row-1">
+                <kendo-label class="k-checkbox-label" [for]="notiTitle" text="Gởi thông báo trên app mobile với tiêu đề">
+                        <input type="checkbox" #notiTitle kendoCheckBox checked />
+                </kendo-label>
+                <kendo-textbox value="Hachi Hachi chúc mừng bạn nhận được Coupon mã [COUPONID]"></kendo-textbox>
+        </div>
+
+        <kendo-label class="row row-2" text="Nội dung thông báo">
+                <kendo-textarea resizable="none" value="🌸 CHÀO ĐÓN LỄ HỘI SAKURA ĐỘC ĐÁO TẠI HACHI HACHI 
+🎉 Cuối tháng 3 đầu tháng 4 là thời điểm đẹp nhất để có thể nhìn ngắm những bông hoa anh đào nở rộ. Đặc biệt, với người Nhật Bản, đây còn là một dịp đặc biệt để mọi người cùng nhau “thưởng hoa”. Và để hưởng ứng mùa hoa anh đào năm nay, Hachi Hachi mang đến cho quý khách hàng chương trình khuyến mãi đặc biệt đây ạ. 
+🌸 CỰC ĐÃ với chương trình SAKURA BIG SALE 2023 với hơn 80 sản phẩm giảm giá sốc từ 30%++ sẽ diễn ra từ ngày 27/3~23/4/2023 . "></kendo-textarea>
+        </kendo-label>
+
+        <kendo-label class="row row-3" text="Thời điểm gởi thông báo trên App mobile">
+                <!-- <kendo-datetimepicker [(value)]="value" [disabledDates]="disabledDates" calendarType="classic">
+                        <ng-template kendoCalendarHeaderTitleTemplate let-title>
+                                {{title.replace(' 20', ', 20')}}
+                                <ng-template kendoCalendarMonthCellTemplate let-date>
+                                        <span [ngClass]="isNone(date, title)">{{ date.getDate() }}</span>
+                                </ng-template>
+                        </ng-template>
+                </kendo-datetimepicker> -->
+                <kendo-datetimepicker calendarType="classic"></kendo-datetimepicker>
+
+        </kendo-label>
+
+        <kendo-label class="row row-4" text="Đối tượng gởi thông báo trên App mobile">
+                <kendo-label class="k-checkbox-label" [for]="cb1" text="Tất cả đối tượng nhận coupon tải app">
+                        <input type="checkbox" #cb1 kendoCheckBox />
+                </kendo-label>
+                <kendo-label class="k-checkbox-label" [for]="cb2" text="Tất cả KHTT tải app">
+                        <input type="checkbox" #cb2 kendoCheckBox />
+                </kendo-label>
+                <kendo-label class="k-checkbox-label" [for]="cb3" text="TTất cả khách hàng tải app">
+                        <input type="checkbox" #cb3 kendoCheckBox />
+                </kendo-label>
+        </kendo-label>
+</div>

@@ -22,6 +22,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import "@progress/kendo-angular-intl/locales/vi/all";
 import { TreeViewModule } from '@progress/kendo-angular-treeview';
 import { ConditionsApplyComponent } from './conditions-apply/conditions-apply.component';
+import { NotiConfigComponent } from './noti-config/noti-config.component';
 
 
 
@@ -33,7 +34,8 @@ import { ConditionsApplyComponent } from './conditions-apply/conditions-apply.co
     FunctionBarComponent,
     MainViewsComponent,
     CouponInfoComponent,
-    ConditionsApplyComponent
+    ConditionsApplyComponent,
+    NotiConfigComponent
   ],
   imports: [
     BrowserModule,

@@ -1,11 +1,11 @@
 <div class="group-tittle">
         <h3>ĐIỀU KIỆN ÁP DỤNG</h3>
 </div>
-<kendo-gridlayout [cols]="[220, 265, 'auto']" [gap]="100">
+<kendo-gridlayout [cols]="[220, 265, 'auto']" [gap]="120">
         <!-- Cell 1 -->
-        <kendo-gridlayout-item class="box">
+        <kendo-gridlayout-item class="box cell-1">
                 <kendo-label text="Đơn vị áp dụng">
-                        <kendo-treeview [nodes]="data" [children]="children" [hasChildren]="hasChildren" textField="text" [kendoTreeViewCheckable]="{checkChildren: true, checkOnClick: true}"></kendo-treeview>
+                        <kendo-treeview class="mt-1" [nodes]="data" [children]="children" size="small" [hasChildren]="hasChildren" textField="text" [kendoTreeViewCheckable]="{checkChildren: true, checkOnClick: true}"></kendo-treeview>
                 </kendo-label>
         </kendo-gridlayout-item>
 
@@ -26,7 +26,7 @@
                 </kendo-label>
                 <kendo-label text="Giá trị chiết khấu tối đa của coupon" class="mt-5">
                         <kendo-label text="Giá trị chiết khấu tối đa" class="text-dark mt-1">
-                                <kendo-numerictextbox [value]="100000" [format]="{style: 'decimal'}" [spinners]="false" class="text-right" [style.width.px]="67" [style.height.px]="24"></kendo-numerictextbox>
+                                <kendo-numerictextbox [value]="100000" [format]="{style: 'decimal'}" [spinners]="false" class="text-right" [style.width.px]="67" [style.height.px]="24" class="bg-g"></kendo-numerictextbox>
                         </kendo-label>
                 </kendo-label>
         </kendo-gridlayout-item>
