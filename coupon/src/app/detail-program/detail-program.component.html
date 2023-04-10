@@ -1,1 +1,54 @@
-<p>detail-program works!</p>
+<div class="group-control">
+        <div class="title-search">
+                <div class="title">
+                        <h3>THÔNG TIN CHI TIẾT CHƯƠNG TRÌNH</h3>
+                </div>
+                <kendo-textbox [style.width.px]="432" placeholder="Tìm theo barcode, poscode, tên sản phẩm">
+                        <ng-template kendoTextBoxPrefixTemplate>
+                                <button kendoButton fillMode="clear" icon="search"></button>
+                        </ng-template>
+                        <ng-template kendoTextBoxSuffixTemplate>
+                                <kendo-textbox-separator></kendo-textbox-separator>
+                                <button kendoButton fillMode="clear" class="send-button">
+                                        <span class="k-icon k-i-search"></span>
+                                        Tìm
+                                </button>
+                        </ng-template>
+                </kendo-textbox>
+        </div>
+        <kendo-buttongroup [style.width.px]="323">
+                <button kendoButton class="item"><span class="k-icon k-i-export"></span></button>
+                <button kendoButton class="item m-item"><span class="k-icon k-i-import"></span>Template</button>
+                <button kendoButton class="item m-item"><span class="k-icon k-i-plus"></span>THÊM MỚI SẢN PHẨM</button>
+        </kendo-buttongroup>
+</div>
+<kendo-grid [data]="gridData">
+        <kendo-grid-column>
+                <ng-template kendoGridCellTemplate let-dataItem>
+                        <div class="item-product">
+                                <div class="image-conntrol">
+                                        <div class="img">
+                                                <img src="http://test.lapson.vn/{{dataItem.ImageThumb}}" alt="">
+                                        </div>
+                                        <button kendoButton>
+                                                <span class="k-icon k-i-trash"></span>
+                                        </button>
+                                </div>
+                                <div class="title">
+                                        <h4>{{dataItem.ProductName}}</h4>
+                                        <h5>{{dataItem.Barcode}}</h5>
+                                </div>
+                        </div>
+                </ng-template>
+        </kendo-grid-column>
+</kendo-grid>
+<kendo-datapager [style.width.%]="100" [pageSize]="pageSize" [skip]="skip" [total]="total" (pageChange)="onPageChange($event)">
+        <ng-template kendoDataPagerTemplate let-totalPages="totalPages" let-currentPage="currentPage">
+                <div class="k-pager-numbers-wrap">
+                        <kendo-datapager-prev-buttons></kendo-datapager-prev-buttons>
+                        <kendo-datapager-numeric-buttons [buttonCount]="3"></kendo-datapager-numeric-buttons>
+                        <kendo-datapager-next-buttons></kendo-datapager-next-buttons>
+                </div>
+                <kendo-datapager-page-sizes [pageSizes]="sizes"></kendo-datapager-page-sizes>
+        </ng-template>
+</kendo-datapager>

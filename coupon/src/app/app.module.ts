@@ -18,44 +18,52 @@ import { LabelModule } from '@progress/kendo-angular-label';
 import { InputsModule } from '@progress/kendo-angular-inputs';
 import { DateInputsModule } from '@progress/kendo-angular-dateinputs';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import "@progress/kendo-angular-intl/locales/vi/all";
 import { TreeViewModule } from '@progress/kendo-angular-treeview';
 import { ConditionsApplyComponent } from './conditions-apply/conditions-apply.component';
 import { NotiConfigComponent } from './noti-config/noti-config.component';
 import { DetailProgramComponent } from './detail-program/detail-program.component';
+import { GridModule } from '@progress/kendo-angular-grid';
+import { PagerModule } from '@progress/kendo-angular-pager';
+
+
 
 
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    TopBarComponent,
-    SideBarComponent,
-    FunctionBarComponent,
-    MainViewsComponent,
-    CouponInfoComponent,
-    ConditionsApplyComponent,
-    NotiConfigComponent,
-    DetailProgramComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    NavigationModule,
-    BrowserAnimationsModule,
-    ButtonsModule,
-    IconsModule,
-    LayoutModule,
-    IndicatorsModule,
-    LabelModule,
-    InputsModule,
-    DateInputsModule,
-    FormsModule,
-    ReactiveFormsModule,
-    TreeViewModule
-  ],
-  providers: [{ provide: LOCALE_ID, useValue: "vi-VI" }],
-  bootstrap: [AppComponent]
+	declarations: [
+		AppComponent,
+		TopBarComponent,
+		SideBarComponent,
+		FunctionBarComponent,
+		MainViewsComponent,
+		CouponInfoComponent,
+		ConditionsApplyComponent,
+		NotiConfigComponent,
+		DetailProgramComponent
+	],
+	imports: [
+		BrowserModule,
+		AppRoutingModule,
+		NavigationModule,
+		BrowserAnimationsModule,
+		ButtonsModule,
+		IconsModule,
+		LayoutModule,
+		IndicatorsModule,
+		LabelModule,
+		InputsModule,
+		DateInputsModule,
+		FormsModule,
+		ReactiveFormsModule,
+		TreeViewModule,
+		GridModule,
+		HttpClientModule,
+		PagerModule
+	],
+	providers: [{ provide: LOCALE_ID, useValue: "vi-VI" }],
+	bootstrap: [AppComponent]
 })
 export class AppModule { }
