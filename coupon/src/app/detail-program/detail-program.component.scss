@@ -1,159 +1,348 @@
 ::ng-deep {
-        .group-control {
-                display: flex;
-                justify-content: space-between;
-
-                .title-search {
+        app-detail-program {
+                .group-control {
                         display: flex;
+                        justify-content: space-between;
 
-                        .title {
-                                h3 {
-                                        font-size: 16px;
-                                        font-weight: 700;
-                                        color: #26282E;
-                                        margin-top: 20px;
-                                        margin-bottom: 15px;
-                                }
-                        }
-
-                        .k-textbox {
-                                box-shadow: 3px 3px 8px -2px rgba(0, 0, 0, 0.2);
-                                margin: 15.5px 0 10.5px 20px;
-                                border: none;
-
-                                .k-input-prefix {
-                                        height: 100%;
-                                        width: 29px;
-
-                                        .k-button {
-                                                .k-icon-wrapper-host {
-                                                        .k-icon {
-                                                                color: #5A6276;
-                                                        }
-                                                }
-                                        }
-                                }
-
-                                .k-input-suffix {
-                                        background-color: #EDEFF3;
-
-                                        .k-input-separator {
-                                                width: 8px !important;
-                                                height: 100%;
-                                                border: none;
-                                                background-color: #EDEFF3 !important;
-                                        }
-
-                                        .k-button {
-                                                padding-left: 5px;
-                                                padding-right: 5px;
-                                                height: 100%;
-                                                background-color: #008000 !important;
-
-                                                .k-button-text {
-                                                        font-weight: 700;
-                                                        font-size: 11px;
-                                                        color: #FFFFFF;
-
-                                                        .k-icon {
-                                                                font-size: 14px;
-                                                        }
-                                                }
-                                        }
-                                }
-
-                                .k-input-inner {
-                                        padding: 0;
-                                        border-top-right-radius: 30px;
-                                }
-
-                                .k-input-inner::placeholder {
-                                        font-weight: 400;
-                                        font-size: 13px;
-                                        color: #26282E;
-                                        opacity: 0.4;
-                                }
-                        }
-                }
-        }
-
-        .k-button-group {
-                margin-top: 14px;
-                margin-bottom: 9px;
-                margin-right: 5px;
-                justify-content: space-between;
-
-                .k-button.item {
-                        border: none;
-                        box-shadow: 3px 3px 8px -2px rgba(0, 0, 0, 0.2);
-
-                        .k-button-text {
+                        .title-search {
                                 display: flex;
-                                align-items: center;
-                                font-weight: 600;
-                                font-size: 13px;
-                                color: #959DB3;
-                        }
-                }
 
-                .m-item {
-                        .k-button-text {
-                                .k-icon {
-                                        margin-right: 5px;
+                                .title {
+                                        h3 {
+                                                font-size: 16px;
+                                                font-weight: 700;
+                                                color: #26282E;
+                                                margin-top: 20px;
+                                                margin-bottom: 15px;
+                                        }
+                                }
+
+                                .k-textbox {
+                                        box-shadow: 3px 3px 8px -2px rgba(0, 0, 0, 0.2);
+                                        margin: 15.5px 0 10.5px 20px;
+                                        border: none;
+
+                                        .k-input-prefix {
+                                                height: 100%;
+                                                width: 29px;
+
+                                                .k-button {
+                                                        .k-icon-wrapper-host {
+                                                                .k-icon {
+                                                                        color: #5A6276;
+                                                                }
+                                                        }
+                                                }
+                                        }
+
+                                        .k-input-suffix {
+                                                background-color: #EDEFF3;
+
+                                                .k-input-separator {
+                                                        width: 8px !important;
+                                                        height: 100%;
+                                                        border: none;
+                                                        background-color: #EDEFF3 !important;
+                                                }
+
+                                                .k-button {
+                                                        padding-left: 5px;
+                                                        padding-right: 5px;
+                                                        height: 100%;
+                                                        background-color: #008000 !important;
+
+                                                        .k-button-text {
+                                                                font-weight: 700;
+                                                                font-size: 11px;
+                                                                color: #FFFFFF;
+
+                                                                .k-icon {
+                                                                        font-size: 14px;
+                                                                }
+                                                        }
+                                                }
+                                        }
+
+                                        .k-input-inner {
+                                                padding: 0;
+                                                border-top-right-radius: 30px;
+                                        }
+
+                                        .k-input-inner::placeholder {
+                                                font-weight: 400;
+                                                font-size: 13px;
+                                                color: #26282E;
+                                                opacity: 0.4;
+                                        }
                                 }
                         }
                 }
 
-                .m-item:nth-child(3) {
-                        background-color: #008000;
+                .k-button-group {
+                        margin-top: 14px;
+                        margin-bottom: 9px;
+                        margin-right: 5px;
+                        justify-content: space-between;
 
-                        .k-button-text {
-                                color: #FFFFFF;
+                        .k-button.item {
+                                border: none;
+                                box-shadow: 3px 3px 8px -2px rgba(0, 0, 0, 0.2);
+
+                                .k-button-text {
+                                        display: flex;
+                                        align-items: center;
+                                        font-weight: 600;
+                                        font-size: 13px;
+                                        color: #959DB3;
+                                }
+                        }
+
+                        .m-item {
+                                .k-button-text {
+                                        .k-icon {
+                                                margin-right: 5px;
+                                        }
+                                }
+                        }
+
+                        .m-item:nth-child(3) {
+                                background-color: #008000;
+
+                                .k-button-text {
+                                        color: #FFFFFF;
+                                }
                         }
                 }
-        }
 
-        .k-grid {
-                .k-grid-aria-root {
-                        .k-grid-container {
-                                .k-grid-content {
-                                        .k-grid-table-wrap {
-                                                .k-grid-table {
-                                                        .k-table-tbody {
-                                                                display: flex;
-                                                                flex-direction: row;
-                                                                flex-wrap: wrap;
-                                                                justify-content: space-between;
-                                                                background-color: #008000;
+                .k-grid {
+                        border: none;
+                        background-color: transparent;
 
-                                                                .k-table-row {
-                                                                        width: 222px;
-                                                                        height: auto;
+                        .k-grid-aria-root {
+                                height: auto;
 
-                                                                        .k-table-td {
-                                                                                .item-product {
-                                                                                        display: flex;
+                                .k-grid-header {
+                                        display: none;
+                                }
 
-                                                                                        .image-conntrol {
-                                                                                                position: relative;
+                                .k-grid-container {
+                                        .k-grid-content {
+                                                background-color: transparent;
+                                                padding: 1px;
 
-                                                                                                img {
-                                                                                                        height: 76px;
-                                                                                                        width: 76px;
-                                                                                                        margin: 14px 10px;
+                                                .k-grid-table-wrap {
+                                                        height: 100%;
+
+                                                        .k-grid-table {
+                                                                height: 100%;
+
+                                                                .k-table-tbody {
+                                                                        display: flex;
+                                                                        flex-direction: row;
+                                                                        flex-wrap: wrap;
+                                                                        justify-content: space-between;
+                                                                        height: 100%;
+                                                                        align-content: flex-start;
+
+                                                                        .k-table-row {
+                                                                                width: 222px;
+                                                                                height: 95px;
+                                                                                outline: 1px solid #008000;
+                                                                                display: flex;
+                                                                                align-items: center;
+                                                                                padding-left: 10px;
+                                                                                padding-right: 10px;
+                                                                                margin-top: 15px;
+                                                                                background-color: transparent;
+                                                                                border-radius: 5px;
+                                                                                background-color: #FFFFFF;
+
+                                                                                .k-table-td {
+                                                                                        padding: 0;
+
+                                                                                        .item-product {
+                                                                                                display: flex;
+
+                                                                                                .image-conntrol {
+                                                                                                        position: relative;
+                                                                                                        margin-right: 10px;
+
+                                                                                                        .img {
+                                                                                                                height: 75px;
+
+                                                                                                                img {
+                                                                                                                        width: 75px;
+                                                                                                                        height: 75px;
+                                                                                                                }
+                                                                                                        }
+
+                                                                                                        button {
+                                                                                                                position: absolute;
+                                                                                                                top: 0;
+                                                                                                                padding: 0;
+                                                                                                                color: #FF0000;
+                                                                                                                background-color: transparent;
+                                                                                                                border: none;
+                                                                                                        }
                                                                                                 }
 
-                                                                                                button {
-                                                                                                        position: absolute;
-                                                                                                        top: 0;
-                                                                                                        left: 0;
+                                                                                                .title {
+
+                                                                                                        h4,
+                                                                                                        h5 {
+                                                                                                                font-weight: 400;
+                                                                                                                font-size: 13px;
+                                                                                                                color: #353935;
+                                                                                                        }
+
+                                                                                                        h4 {
+                                                                                                                margin: 0;
+                                                                                                        }
+
+                                                                                                        h5 {
+                                                                                                                margin-top: 10px;
+                                                                                                                margin-bottom: 0;
+                                                                                                        }
                                                                                                 }
                                                                                         }
-
-                                                                                        .title {}
                                                                                 }
                                                                         }
                                                                 }
+                                                        }
+                                                }
+                                        }
+                                }
+                        }
+                }
+
+                .k-pager {
+                        padding: 10px;
+                        display: flex;
+                        flex-direction: row-reverse;
+                        justify-content: space-between;
+                        background: transparent;
+                        border: none;
+
+                        .k-pager-sizes::before {
+                                content: "Hiển thị mỗi trang";
+                                font-weight: 700;
+                                font-size: 13px;
+                                color: #959DB3;
+                                margin-right: 10px;
+                        }
+
+                        .k-pager-sizes {
+                                color: transparent;
+
+                                .k-picker-solid:focus,
+                                .k-picker-solid:focus-within,
+                                .k-picker-solid.k-focus {
+                                        box-shadow: none;
+                                }
+
+                                .k-dropdown {
+                                        width: auto;
+                                        background-color: transparent;
+                                        border: none;
+                                        background-image: none;
+
+                                        .k-input-inner {
+                                                padding: 0;
+
+                                                .k-input-value-text {
+                                                        font-weight: 400;
+                                                        font-size: 13px;
+                                                        color: #26282E;
+                                                }
+                                        }
+                                }
+                        }
+
+                        .k-pager-numbers-wrap {
+                                .k-button {
+                                        border-radius: 5px;
+                                }
+
+                                kendo-datapager-numeric-buttons {
+                                        .k-pager-numbers {
+                                                .k-button {
+                                                        color: #959DB3;
+                                                        height: 30px;
+                                                        width: 20px;
+                                                        padding: 0px;
+                                                        min-width: 20px;
+                                                        border-radius: 5px;
+                                                        margin-left: 2px;
+                                                        margin-right: 2px;
+                                                }
+                                        }
+                                }
+
+                                kendo-datapager-next-buttons,
+                                kendo-datapager-prev-buttons {
+                                        .k-button {
+                                                background-color: #FFFFFF !important;
+                                                margin-right: 5px;
+                                        }
+                                }
+
+                                kendo-datapager-prev-buttons {
+                                        .k-button:last-child {
+                                                padding: 0px;
+                                                width: 20px;
+                                                height: 30px;
+                                                min-width: 20px;
+                                        }
+
+                                        .k-pager-first {
+                                                .k-button-icon {
+                                                        display: none;
+                                                }
+
+                                                .k-button-text::after {
+                                                        content: "Đầu";
+                                                        padding-left: 10px;
+                                                        padding-right: 10px;
+                                                }
+                                        }
+                                }
+
+                                kendo-datapager-next-buttons {
+                                        .k-button:first-child {
+                                                padding: 0px;
+                                                width: 20px;
+                                                height: 30px;
+                                                min-width: 20px;
+                                        }
+
+                                        .k-pager-last {
+                                                .k-button-icon {
+                                                        display: none;
+                                                }
+
+                                                .k-button-text::after {
+                                                        content: "Cuối";
+                                                        padding-left: 10px;
+                                                        padding-right: 10px;
+                                                }
+                                        }
+                                }
+                        }
+
+                        kendo-resize-sensor {
+                                display: none;
+                        }
+                }
+
+                .k-animation-container {
+                        .k-popup {
+                                .k-list {
+                                        .k-list-content {
+                                                .k-list-ul {
+                                                        .k-list-item.k-selected {
+                                                                background-color: #F5F6F8;
+                                                                color: #26282E;
+                                                                box-shadow: none;
                                                         }
                                                 }
                                         }

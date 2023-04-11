@@ -14,7 +14,7 @@ export class DetailProgramComponent {
 
 	public gridData: any
 	public contentId = 'content-1';
-	public pageSize = 10;
+	public pageSize = 20;
 	public sizes = [10, 20, 50];
 	public total: any
 	public skip = 0;
@@ -22,12 +22,11 @@ export class DetailProgramComponent {
 	public onPageChange(e: PageChangeEvent): void {
 		this.skip = e.skip;
 		this.pageSize = e.take;
-		this.pageData((this.skip / 10) + 1, this.pageSize);
+		this.pageData((this.skip / this.pageSize) + 1, this.pageSize);
 	}
 
 	private pageData(page: number, pageSize: number) {
 		this.productService.getListProduct(page, pageSize).subscribe(data => {
-			console.log(data)
 			this.gridData = data.ObjectReturn.Data
 			this.total = data.ObjectReturn.Total
 		})
