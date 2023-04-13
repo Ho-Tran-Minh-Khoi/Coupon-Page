@@ -22,9 +22,8 @@
 🎉 Cuối tháng 3 đầu tháng 4 là thời điểm đẹp nhất để có thể nhìn ngắm những bông hoa anh đào nở rộ. Đặc biệt, với người Nhật Bản, đây còn là một dịp đặc biệt để mọi người cùng nhau “thưởng hoa”. Và để hưởng ứng mùa hoa anh đào năm nay, Hachi Hachi mang đến cho quý khách hàng chương trình khuyến mãi đặc biệt đây ạ. 
 🌸 CỰC ĐÃ với chương trình SAKURA BIG SALE 2023 với hơn 80 sản phẩm giảm giá sốc từ 30%++ sẽ diễn ra từ ngày 27/3~23/4/2023 . "></kendo-textarea>
         </kendo-label>
-
         <kendo-label class="row row-3" text="Thời điểm gởi thông báo trên App mobile">
-                <kendo-datetimepicker [(value)]="value" [disabledDates]="disabledDates" calendarType="classic" format="dd/MM/yyyy HH:mm a">
+                <kendo-datetimepicker [(value)]="value1" [disabledDates]="disabledDates" calendarType="classic" format="dd/MM/yyyy HH:mm a" id="kdatetimepicker" (close)="onClose()">
                         <ng-template kendoCalendarHeaderTitleTemplate let-title>
                                 {{title.replace(' 20', ', 20')}}
                                 <ng-template kendoCalendarMonthCellTemplate let-date>
@@ -47,4 +46,18 @@
                         </kendo-label>
                 </div>
         </kendo-label>
+</div>
+<div class="temp">
+        <div class="timePicker">
+                <div class="alldayCbox">
+                        <input size="small" type="checkbox" [(ngModel)]="cbox" (click)="allDateClick()" #allday kendoCheckBox /><kendo-label [for]="allday" text="Cả ngày" [ngClass]="cbox ? 'text-primary' : ''"></kendo-label>
+                </div>
+                <div class="form-tpk">
+                        <kendo-dropdownlist [data]="listItems" (valueChange)="valueChange($event)" [disabled]="cbox" [defaultItem]="titleLB"> </kendo-dropdownlist>
+                        <kendo-buttongroup selection="single" class="btn-group">
+                                <button kendoButton [toggleable]="true" [disabled]="cbox" [selected]="true" (click)="changeMoa(0)">AM</button>
+                                <button kendoButton [toggleable]="true" [disabled]="cbox" (click)="changeMoa(1)">PM</button>
+                        </kendo-buttongroup>
+                </div>
+        </div>
 </div>

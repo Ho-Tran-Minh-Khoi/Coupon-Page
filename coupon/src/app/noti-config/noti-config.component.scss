@@ -240,8 +240,11 @@
                                 }
 
                                 .k-datetime-selector {
-                                        display: flex;
                                         flex-direction: column;
+
+                                        .k-datetime-time-wrap {
+                                                display: none;
+                                        }
 
                                         .k-datetime-calendar-wrap {
                                                 height: auto;
@@ -356,19 +359,149 @@
                                                                         }
                                                                 }
                                                         }
-                                                }
-                                        }
 
-                                        .k-datetime-time-wrap {
-                                                .k-disabled {
-                                                        pointer-events: auto;
-                                                        opacity: 1;
+                                                        .timePicker {
+                                                                padding: 15px;
+                                                                border-top: 1px solid #DBDEE7;
+                                                                margin-top: 5px;
+                                                                display: block;
+
+                                                                .alldayCbox {
+                                                                        display: flex;
+                                                                        align-items: center;
+
+                                                                        input {
+                                                                                border-color: #999999;
+                                                                                border-radius: 30px;
+                                                                                margin-right: 5px;
+                                                                        }
+
+                                                                        .k-checkbox:checked:focus,
+                                                                        .k-checkbox.k-checked.k-focus {
+                                                                                box-shadow: none;
+                                                                        }
+
+                                                                        .k-checkbox:checked {
+                                                                                background-color: #008000;
+                                                                        }
+
+                                                                        kendo-label {
+                                                                                label {
+                                                                                        font-weight: 400;
+                                                                                        font-size: 13px;
+                                                                                        color: #26282E;
+                                                                                }
+                                                                        }
+
+                                                                        .text-primary {
+                                                                                label {
+                                                                                        color: #008000;
+                                                                                }
+                                                                        }
+                                                                }
+
+                                                                .form-tpk {
+                                                                        padding-top: 10px;
+                                                                        display: flex;
+                                                                        justify-content: space-between;
+                                                                        align-items: center;
+
+                                                                        .k-picker-solid:focus-within {
+                                                                                box-shadow: 0 0 0 2px #008000;
+                                                                        }
+
+                                                                        .k-picker {
+                                                                                width: 105px;
+                                                                                height: 25px;
+                                                                                background-color: transparent;
+
+                                                                                .k-input-inner {
+                                                                                        .k-input-value-text {
+                                                                                                font-weight: 400;
+                                                                                                font-size: 13px;
+                                                                                                color: #26282e61;
+                                                                                        }
+                                                                                }
+                                                                        }
+
+                                                                        .btn-group {
+                                                                                display: flex;
+                                                                                width: 75px;
+                                                                                justify-content: space-between;
+                                                                                align-items: center;
+
+                                                                                button {
+                                                                                        width: 35px;
+                                                                                        height: 35px;
+                                                                                        border-radius: 30px;
+                                                                                        background-color: transparent;
+                                                                                        color: #26282e5f;
+                                                                                        border: none;
+                                                                                        background-image: none;
+                                                                                }
+
+                                                                                .k-selected {
+                                                                                        background-color: #008000;
+                                                                                        border: none;
+                                                                                        color: #FFFFFF;
+                                                                                }
+
+                                                                                .k-button:hover {
+                                                                                        outline: 1px solid #008000;
+                                                                                }
+
+                                                                                .k-selected.k-disabled,
+                                                                                .k-disabled {
+                                                                                        background-color: transparent;
+                                                                                        color: #26282e5f;
+                                                                                }
+                                                                        }
+                                                                }
+                                                        }
                                                 }
                                         }
                                 }
 
-                                .k-datetime-footer {}
+                                .k-datetime-footer {
+                                        display: none;
+                                }
+                        }
+
+                        .k-time-tab {
+                                .k-datetime-selector {
+                                        transform: translateX(0);
+                                }
                         }
                 }
+
+                .k-list-container {
+                        height: 150px;
+
+                        .k-list {
+                                .k-list-content {
+                                        .k-list-ul {
+                                                li {
+                                                        font-weight: 400;
+                                                        font-size: 13px;
+                                                        color: #26282E;
+                                                }
+
+                                                .k-selected {
+                                                        background-color: #F5F6F8;
+                                                        outline: none;
+                                                        box-shadow: none;
+                                                }
+                                        }
+                                }
+                        }
+
+                        .k-list:first-child {
+                                display: none;
+                        }
+                }
+        }
+
+        .timePicker {
+                display: none;
         }
 }

@@ -27,6 +27,10 @@ import { NotiConfigComponent } from './noti-config/noti-config.component';
 import { DetailProgramComponent } from './detail-program/detail-program.component';
 import { GridModule } from '@progress/kendo-angular-grid';
 import { PagerModule } from '@progress/kendo-angular-pager';
+import { PopupModule } from '@progress/kendo-angular-popup';
+import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
+
+
 
 
 
@@ -42,7 +46,7 @@ import { PagerModule } from '@progress/kendo-angular-pager';
 		CouponInfoComponent,
 		ConditionsApplyComponent,
 		NotiConfigComponent,
-		DetailProgramComponent
+		DetailProgramComponent,
 	],
 	imports: [
 		BrowserModule,
@@ -61,7 +65,9 @@ import { PagerModule } from '@progress/kendo-angular-pager';
 		TreeViewModule,
 		GridModule,
 		HttpClientModule,
-		PagerModule
+		PagerModule,
+		PopupModule,
+		DropDownsModule
 	],
 	providers: [{ provide: LOCALE_ID, useValue: "vi-VI" }],
 	bootstrap: [AppComponent]
